@@ -1,0 +1,9 @@
+2018-07-05 13:15:48.784 INFO  54ogger - Host Information: https://api.twitter.com/1.1/statuses
+2018-07-05 13:20:50.170 ERROR 76ogger - io.restassured.internal.RestAssuredResponseImpl@7e4c72d6
+2018-07-05 13:20:50.454 INFO  80ogger - 1014778613428781056
+2018-07-05 13:20:50.456 INFO  54ogger - Host Information: https://api.twitter.com/1.1/statuses
+2018-07-05 13:20:51.195 ERROR 59ogger - io.restassured.internal.RestAssuredResponseImpl@6f5bd362
+2018-07-05 13:20:51.211 INFO  61ogger - text: [Creating first tweet using rest assure]
+2018-07-05 13:20:51.224 INFO  63ogger - id: [1014778613428781056]
+2018-07-05 13:20:51.800 INFO  95ogger - text: Creating first tweet using rest assure
+2018-07-05 13:20:51.810 INFO  97ogger - id: false
