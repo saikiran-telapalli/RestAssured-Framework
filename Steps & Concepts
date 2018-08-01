@@ -1,0 +1,82 @@
+	JSON Viewer  		:  https://jsoneditoronline.org/
+	JSON Path Finder 	:  https://jsonpath.curiousconcept.com/
+**************************************************************************************
+1.Get(Read)
+
+given().param("").when().get("").then().assertThat().statusCode(200).and().contentType(ContentType.JSON).and(). 
+		body("",equalTo("")).
+**************************************************************************************
+2. Post(create)
+
+given().queryparam("").header("").body("").when().post("").then().assertThat().statusCode(200).and().contentType(ContentType.JSON).
+		extract().response(); 
+
+**************************************************************************************
+3. Put(Update)
+
+given().queryparam("").header("").body("").when().put("").then().assertThat().statusCode(200).and().contentType(ContentType.JSON).
+		extract().response(); 
+
+**************************************************************************************
+OptimisingScriptsCentralisingData : Continues end to end test
+Task1--------------> Grab the response
+Task2--------------> To get grab any thing from response we need to convert string into json
+	 1.When u get response it will be in Raw format convert into string
+	 2.Convert the string response to Json format using Json path object
+Task3--------------> Place the place_id in delete request
+
+**************************************************************************************	 
+
+Authentication: Under Autherization
+
+1.Basic Authentication: 
+
+Providing cookies/ session id in the form of headers or parameters for ex: JIRA/Google API
+			If you take an example of sales force the "Basic Auth" we give username and password
+			
+			
+			
+2. OAuth Authentication:
+a.Twitter API : OAuth 1.0 == we need to provide 4 details
+i. 	consumerKey
+ii.	consumerSecret
+iii.Token
+iv.	TokenSecret
+
+The given statement will be followed by auth as follows
+given().auth().oauth(consumerKey, consumerSecret, Token, TokenSecret)
+
+**************************************************************************************
+1. If Oauth_1.0 authentication needed then we need to import following scribe jars
+
+	https://mvnrepository.com/artifact/com.github.scribejava/scribejava-apis/2.5.3
+	https://mvnrepository.com/artifact/com.github.scribejava/scribejava-core/2.5.3
+	
+**************************************************************************************
+Response Codes: https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
+
+1.200	OK
+2.201	Created
+3.202	Accepted
+
+4.300	Multiple Choices
+5.301	Moved Permanently
+6.302	Found
+7.304	Not Modified
+
+8.400	Bad Request
+9.401	Unauthorized
+10.402	Payment Required
+11.403	Forbidden
+12.404	Not Found
+19.407	Proxy Authentication Required
+20.408	Request Timeout
+21.413	Payload Too Large
+
+13.500	Internal Server Error
+14.501	Not Implemented
+15.502	Bad Gateway
+16.503	Service Unavailable
+17.504	Gateway Timeout
+18.505	HTTP Version Not Supported
+22.507	Insufficient Storage
